@@ -1,7 +1,7 @@
-
-
 ## Was "scaling up" im Kryptowährungsraum bedeutet ##
 
+Einerseits hat der Blockchain-Bereich gerade eine Unzahl an neuen und
+such vielversprechenden Projekten zu bieten, die 
 
 
 ---

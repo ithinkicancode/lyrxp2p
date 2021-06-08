@@ -25,9 +25,9 @@ object Landing{
   def fragments(titles: Seq[String], parsArray: Seq[Seq[String]]) = Fragment(
     Contact(props)
     ,
-    MArticle(action  = (()=>Main.toPage(props,  WhereAreWe.page)),  text = titles(0), parsArray(0)),
-    MArticle(action = (()=>Main.toPage(props,   Change.page)),  text = titles(1), parsArray(1)),
-    MArticle(action = (()=>Main.toPage(props, Tomorrow.page)),  text = titles(2), parsArray(2)),
+    MArticle(action  = (()=>Main.toPage(props,  WhereAreWe.page)),  text = titles(0), parsArray(0),aPage =WhereAreWe.page ),
+    MArticle(action = (()=>Main.toPage(props,   Change.page)),  text = titles(1), parsArray(1),aPage = Change.page),
+    MArticle(action = (()=>Main.toPage(props, Tomorrow.page)),  text = titles(2), parsArray(2),aPage =Tomorrow.page),
 
   )
 

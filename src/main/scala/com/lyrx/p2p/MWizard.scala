@@ -104,8 +104,8 @@ import scala.scalajs.js
     props.titleOpt.map(t=>if(state.page == 0)header(className := "major",
       h2(t),
     )else Fragment()):Option[ReactElement],
-
     state.textOpt.map(t => markdown(t)),
+    nav(),
 
   )
 }

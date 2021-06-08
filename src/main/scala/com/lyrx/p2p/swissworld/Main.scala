@@ -81,7 +81,9 @@ object Main {
 
   def switchLanguage(aProps: AppProps): Unit = doRenderElements(initProps().copy(appProps = aProps.switchLanguage()))
 
-  def toPage(aProps: AppProps, aPage: String): Unit = doRenderElements(initProps().copy(appProps = aProps.copy(page = aPage)))
+  def toPage(aProps: AppProps, aPage: String): Unit = {
+    doRenderElements(initProps().copy(appProps = aProps.copy(page = aPage)))
+  }
 
   def doRenderElements(elements: SlinkyElements): Unit = {
     ReactDOM.render(BannerTitle(elements.appProps), elements.bannerTitle)

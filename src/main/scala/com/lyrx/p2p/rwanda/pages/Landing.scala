@@ -29,10 +29,12 @@ object Landing{
       MArticle(
         action = (()=>Main.toPage(props,  Catherine.page)),
           text = "Catherine Mukangwije",
-        pars = Seq("A woman who can be proud of herself.")),
+        pars = Seq("A woman who can be proud of herself."),
+        aPage = Catherine.page ),
     MArticle(action = (()=>Main.toPage(props,  Claudine.page)),
       text = "Claudine",
-      pars = Seq("A woman never seen before.")),
+      pars = Seq("A woman never seen before."),
+      aPage = Claudine.page),
 
 
   )

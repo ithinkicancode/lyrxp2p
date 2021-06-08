@@ -69,7 +69,7 @@ object WhereAreWe {
         ))
       )
     ),
-    p("Und nun kommt der ", a(href := "#", onClick := showChange(props))("Wandel"))
+    p("Und nun kommt der ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("Wandel"))
 
   )
 
@@ -102,7 +102,7 @@ object WhereAreWe {
       )
     )
     ,
-    p("Here comes the ", a(href := "#", onClick := showChange(props))("change"))
+    p("Here comes the ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("change"))
 
   )
 

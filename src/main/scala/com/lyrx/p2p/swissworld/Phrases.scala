@@ -5,6 +5,10 @@ import scala.collection.immutable.HashMap
 object Phrases {
   val COMPANY = "Swiss World Teamup"
 
+
+  def toHash(s:String) = s"#${s.stripSuffix(".html")}"
+
+
   type I18MAP = HashMap[String, String]
   type LANGMAP = HashMap[String, I18MAP]
 

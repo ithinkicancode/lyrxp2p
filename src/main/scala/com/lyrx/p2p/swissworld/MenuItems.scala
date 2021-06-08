@@ -18,7 +18,7 @@ import slinky.web.html.{a, href, li, onClick}
   def render() = if (props.isGerman()) renderDE() else renderEN()
 
 
-  def linkItem(page: String, text: String) = li()(a(href := "#", onClick := ((e) => {
+  def linkItem(page: String, text: String) = li()(a(href := Phrases.toHash(page), onClick := ((e) => {
     e.stopPropagation()
     Main.toPage(props, page)
   }))(text))

@@ -60,7 +60,7 @@ object Change{
 
         """, als das in größeren Ländern der Fall sein kann."""))
     ,
-    p("Und ", a(href := "#", onClick := showTomorrow(props))("morgen")," die ganze Welt ...")
+    p("Und ", a(href :=  Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("morgen")," die ganze Welt ...")
 
   )
 
@@ -97,7 +97,7 @@ object Change{
       )
     )
     ,
-    p("And ", a(href := "#", onClick := showTomorrow(props))("tomorrow")," the whole world ...")
+    p("And ", a(href := Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("tomorrow")," the whole world ...")
   )
 
 

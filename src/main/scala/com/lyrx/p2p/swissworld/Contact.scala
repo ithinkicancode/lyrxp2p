@@ -29,7 +29,7 @@ import scala.scalajs.js.Dynamic.literal
   def consulting(s:String)=
     span(className := "icon solid alt fa-calendar")(
       a(//href := "https://calendly.com/a-weinmann/30min",
-        href :="#",
+        href := Phrases.toHash(FreeConsulting.page),
         onClick :=((e)=>{
           e.stopPropagation()
           Main.toPage(props,FreeConsulting.page)

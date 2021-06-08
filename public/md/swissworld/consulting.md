@@ -1,5 +1,5 @@
 
-## Wir müssen reden ##
+## Wir müssen reden! ##
 
 (Die erste halbe Stunde  ist kostenfrei.)
 
@@ -9,7 +9,7 @@
 
 ---
 
-## We must talk ##
+## We must talk! ##
 
 (The first half hour is free of charge)
  
