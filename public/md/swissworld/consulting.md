@@ -1,4 +1,6 @@
-## Die "nullte" halbe Stunde  (kostenfrei) ##
+
+
+(Die erste halbe Stunde  ist kostenfrei.)
 
 - Kennenlernen
 - Projektgröße (Anzahl Mitarbeiter, Arbeitstage, Budget)
@@ -6,8 +8,8 @@
 
 ---
 
-## The "zeroth" half hour (free of charge) ##
-
+(The first half hour is free of charge)
+ 
 - Getting to know each other
 - Project size (number of employees, working days, budget)
 - Technical interfaces, testability, confidentiality

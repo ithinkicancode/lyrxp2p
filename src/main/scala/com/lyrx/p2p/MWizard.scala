@@ -43,12 +43,14 @@ import scala.scalajs.js
   def nav() = {
     val maxPage: Int = state.pageCount
     val buttonPadding = "30px"
-    p(
+    val aPaddingTop = "30px"
+    p(style :=js.Dynamic.literal(paddingTop = aPaddingTop))(
       a(href := "#",
         style := (if (state.page > 0)
           js.Dynamic.literal(
             borderBottom = "0px",
-            paddingRight = buttonPadding)
+            paddingRight = buttonPadding
+          )
         else
           js.Dynamic.literal(
             visibility = "hidden",
@@ -97,8 +99,8 @@ import scala.scalajs.js
 
 
   def render() = div(className := "inner")(
-    currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
     nav(),
+    currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
     if(state.page == 0)header(className := "major",
       h2(props.title),
     )else Fragment(),
