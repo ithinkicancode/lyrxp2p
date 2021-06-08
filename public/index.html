@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Swiss P2P</title>
+
+    <meta name="theme-color" content="#000000">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c"></meta>
+    <meta name="keywords" content="Freedom, Equality, Gleichheit, Freiheit, Liebe, Love">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="images/template/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+
+    <header id="header" class="alt">
+        <div id="page-title"></div>
+        <div id="google_translate_element"></div>
+        <nav>
+            <div id="language-selector"></div>
+            <a href="#menu">Menu</a>
+        </nav>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                var al = window.navigator.language.toLowerCase();
+                console.log("Language: " + al);
+                if (!(al.startsWith('de')
+                    ||
+                    al.startsWith('en')
+                    ||
+                    al.startsWith('ch'))
+                ) {
+                    new google.translate.TranslateElement({
+                        pageLanguage: al,
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, 'google_translate_element');
+                }
+            }
+        </script>
+        <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </header>
+
+    <nav id="menu">
+        <ul class="links" id="menu-links"></ul>
+    </nav>
+
+
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1 id="banner-title"></h1>
+            </header>
+            <div class="content" id="intro-text"></div>
+        </div>
+    </section>
+
+    <section id="contact"></section>
+    <div id="main"></div>
+    <footer id="footer"></footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
