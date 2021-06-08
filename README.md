@@ -10,7 +10,7 @@ using the [forty] template from [HTML5 UP]. It is also using:
 
 - [scala-js]
 - [scalablytyped]
-- [https://slinky.dev/][slinky]
+- [slinky]
 
 
 [lyrxp2p]: https://lyrxp2p.com
