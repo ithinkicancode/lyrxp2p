@@ -45,8 +45,8 @@ object FreeConsulting {
   def renderDE() = section(id := "one")(
     MWizard(props,
       url = myurl(),
-      image= myimg(),
-      title="Wir müssen reden!",
+      imageUrls= Seq(myimg()),
+      title="Wir müssen reden!!",
       isDual = true),
     div(className := "inner")(termin())
   )
@@ -55,7 +55,7 @@ object FreeConsulting {
   def renderEN() = section(id := "one")(
     MWizard(props,
       url =  myurl(),
-      image=myimg(),
+      imageUrls=Seq(myimg()),
       title="We must talk!",
       isDual = true),
     div(className := "inner")(termin())

@@ -4,6 +4,7 @@ import com.lyrx.p2p.Helpers._
 import com.lyrx.p2p.swissworld.AppProps
 import slinky.core._
 import slinky.core.annotations.react
+import slinky.core.facade.Fragment
 import slinky.web.html._
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -12,7 +13,7 @@ import scala.scalajs.js
 
 @react class MWizard extends Component {
 
-  case class Props(appProps: AppProps, url: String, image: String, title: String,isDual:Boolean)
+  case class Props(appProps: AppProps, url: String, imageUrls: Seq[String], title: String,isDual:Boolean)
   case class State(textOpt: Option[String], page: Int, pageCount: Int)
   override def initialState: State = State(textOpt = None, page = 0, pageCount = 0)
 
@@ -84,25 +85,25 @@ import scala.scalajs.js
     )
   }
 
-  def renderDE() = div(className := "inner")(
-    span(className := "image main")(img(src := props.image)),
-    header(className := "major",
-      h2(props.title),
-    ),
+  def currentImage()={
+    val curOpt: Option[String] = props.imageUrls.lift(state.page)
+
+     if(curOpt.isEmpty)
+       props.imageUrls.lift(0)
+     else
+       curOpt
+  }
+
+
+
+  def render() = div(className := "inner")(
+    currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
     nav(),
+    if(state.page == 0)header(className := "major",
+      h2(props.title),
+    )else Fragment(),
+
     state.textOpt.map(t => markdown(t)),
 
   )
-
-  def renderEN() =
-    div(className := "inner")(
-      span(className := "image main")(img(src := props.image)),
-      header(className := "major",
-        h2(props.title),
-      ),
-      nav(),
-      state.textOpt.map(t => markdown(t)),
-    )
-
-  def render() = if (props.appProps.isGerman()) renderDE() else renderEN()
 }
