@@ -4,7 +4,7 @@ import com.lyrx.p2p.Helpers._
 import com.lyrx.p2p.swissworld.AppProps
 import slinky.core._
 import slinky.core.annotations.react
-import slinky.core.facade.Fragment
+import slinky.core.facade.{Fragment, ReactElement}
 import slinky.web.html._
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -13,7 +13,7 @@ import scala.scalajs.js
 
 @react class MWizard extends Component {
 
-  case class Props(appProps: AppProps, url: String, imageUrls: Seq[String], title: String,isDual:Boolean)
+  case class Props(appProps: AppProps, url: String, imageUrls: Seq[String], titleOpt: Option[String],isDual:Boolean)
   case class State(textOpt: Option[String], page: Int, pageCount: Int)
   override def initialState: State = State(textOpt = None, page = 0, pageCount = 0)
 
@@ -101,9 +101,9 @@ import scala.scalajs.js
   def render() = div(className := "inner")(
     nav(),
     currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
-    if(state.page == 0)header(className := "major",
-      h2(props.title),
-    )else Fragment(),
+    props.titleOpt.map(t=>if(state.page == 0)header(className := "major",
+      h2(t),
+    )else Fragment()):Option[ReactElement],
 
     state.textOpt.map(t => markdown(t)),
 

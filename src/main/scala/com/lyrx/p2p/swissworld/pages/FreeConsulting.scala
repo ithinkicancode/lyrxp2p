@@ -46,7 +46,7 @@ object FreeConsulting {
     MWizard(props,
       url = myurl(),
       imageUrls= Seq(myimg()),
-      title="Wir müssen reden!!",
+      titleOpt=None,
       isDual = true),
     div(className := "inner")(termin())
   )
@@ -56,7 +56,7 @@ object FreeConsulting {
     MWizard(props,
       url =  myurl(),
       imageUrls=Seq(myimg()),
-      title="We must talk!",
+      titleOpt=None,
       isDual = true),
     div(className := "inner")(termin())
   )

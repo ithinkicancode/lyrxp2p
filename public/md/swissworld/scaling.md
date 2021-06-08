@@ -1,3 +1,5 @@
+
+
 ## Was "scaling up" im Kryptowährungsraum bedeutet ##
 
 

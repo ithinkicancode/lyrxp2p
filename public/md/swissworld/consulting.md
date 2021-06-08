@@ -1,4 +1,5 @@
 
+## Wir müssen reden ##
 
 (Die erste halbe Stunde  ist kostenfrei.)
 
@@ -7,6 +8,8 @@
 - Technische Schnittstellen, Testbarkeit, Vertraulichkeit
 
 ---
+
+## We must talk ##
 
 (The first half hour is free of charge)
  
