@@ -1,4 +1,4 @@
-## "Es ist allel viel zu langsam!" ##
+## "Es ist alles viel zu langsam!" ##
 
 ### Warum wir über Skalierbarkeit im Kryptobereich nachdenken sollten ###
 

@@ -24,7 +24,7 @@ object Articles {
 
   def fragments(titles: Seq[String], parsArray: Seq[Seq[String]]) = Fragment(
 
-    MArticle(action = (() => Main.toPage(props, Scalability.page)), text = titles(0), parsArray(0), aPage = Scalability.page),
+    MArticle(action = (() => Main.toPage(props, "scaling.html")), text = titles(0), parsArray(0), aPage = "scaling.html"),
 
 
   )

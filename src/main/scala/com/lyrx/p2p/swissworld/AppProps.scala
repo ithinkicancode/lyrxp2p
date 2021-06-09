@@ -26,11 +26,13 @@ object AppProps {
     case AppProps(_, FreeConsulting.page)
     => FreeConsulting(props)
 
-    case AppProps(_, Scalability.page)
-    => Scalability(props)
 
     case AppProps(_, Articles.page)
     => Articles(props)
+
+    case AppProps(_, s:String)
+    => Essay.createEssay(props,s)
+
 
     case _ => Landing(props)
   }
