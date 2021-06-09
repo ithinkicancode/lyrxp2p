@@ -1,6 +1,6 @@
 ## "Es ist allel viel zu langsam!" ##
 
-### Warum wir über Skalierbarkeit im Kryptobereich, nachdenken sollten ###
+### Warum wir über Skalierbarkeit im Kryptobereich nachdenken sollten ###
 
 Beim Thema Kryptowährungen scheiden sich die Geister. Die einen sind sich sicher, dass die Zukunft schon vor der Tür
 steht. Die anderen schnütteln nur den Kopf. Keiner weiß, was Sache ist.

@@ -29,6 +29,9 @@ object AppProps {
     case AppProps(_, Scalability.page)
     => Scalability(props)
 
+    case AppProps(_, Articles.page)
+    => Articles(props)
+
     case _ => Landing(props)
   }
 
