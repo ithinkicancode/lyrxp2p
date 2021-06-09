@@ -11,6 +11,7 @@ object AppProps {
 
   def getComponent(props: AppProps): ReactElement = props match {
 
+
     case AppProps(_, Landing.page)
     => Landing(props)
 
@@ -29,6 +30,9 @@ object AppProps {
 
     case AppProps(_, Articles.page)
     => Articles(props)
+
+    case AppProps(_, ".html") =>  Landing(props)
+
 
     case AppProps(_, s:String)
     => Essay.createEssay(props,s)
