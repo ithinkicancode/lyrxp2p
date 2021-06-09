@@ -87,14 +87,9 @@ import scala.scalajs.js
     )
   }
 
-  def currentImage()={
-    val curOpt: Option[String] = props.imageUrls.lift(state.page)
+  def currentImage()=props.imageUrls.lift(state.page)
 
-     if(curOpt.isEmpty)
-       props.imageUrls.lift(0)
-     else
-       curOpt
-  }
+
 
 
 

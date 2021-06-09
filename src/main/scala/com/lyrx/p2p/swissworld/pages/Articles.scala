@@ -22,26 +22,31 @@ object Articles {
   def initialState = AppState("")
 
 
-  def fragments(titles: Seq[String], parsArray: Seq[Seq[String]]) = Fragment(
+  def essay(page:String,title: String, pars: Seq[String]) = MArticle(
+    action = (() => Main.toPage(props, page)),
+    text = title,
+    pars,
+    aPage = page)
 
-    MArticle(action = (() => Main.toPage(props, "scaling.html")), text = titles(0), parsArray(0), aPage = "scaling.html"),
 
+  def renderDE() = Fragment(
+    essay(
+    page="scaling.html",
+    title= s"Was Skalierbarkeit im Kryptowährungsraum bedeutet",
+    pars = Seq("""... und was für Konsequenzen das hat.""")
+  ),
 
   )
 
-  def renderDE() = fragments(Seq(
-    s"Was Skalierbarkeit im Kryptowährungsraum bedeutet"),
 
-    Seq(
-      Seq("""... und was für Konsequenzen das hat.""")))
+  def renderEN() = Fragment(
+    essay(
+      page="scaling.html",
+      title=  s"What Scalability Means In The Cryptourrency Space",
+    pars = Seq("""... what the consequences are.""")
+  ),
 
-
-  def renderEN() = fragments(Seq(
-    s"What Scalability means in the crypto currency space"),
-
-    Seq(
-      Seq("""... what the consequences are."""
-       )))
+  )
 
 
   def render() = section(id := "one", className := "tiles")(
