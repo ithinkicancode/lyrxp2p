@@ -12,20 +12,30 @@ object AppProps {
     Landing.page,
     Tomorrow.page,
     WhereAreWe.page,
-    FreeConsulting.page
+    FreeConsulting.page,
+    Scalability.page
   )
 
   def getComponent(props: AppProps): ReactElement = props match {
+
     case AppProps(_, Landing.page)
     => Landing(props)
+
     case AppProps(_, WhereAreWe.page)
     => WhereAreWe(props)
+
     case AppProps(_, Change.page)
     => Change(props)
+
     case AppProps(_, Tomorrow.page)
     => Tomorrow(props)
+
     case AppProps(_, FreeConsulting.page)
     => FreeConsulting(props)
+
+    case AppProps(_, Scalability.page)
+    => Scalability(props)
+
     case _ => Landing(props)
   }
 
