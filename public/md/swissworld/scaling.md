@@ -1,3 +1,24 @@
+## "Es ist allel viel zu langsam!" ##
+
+### Warum wir über Skalierbarkeit im Kryptobereich, nachdenken sollten ###
+
+Beim Thema Kryptowährungen scheiden sich die Geister. Die einen sind sich sicher, dass die Zukunft schon vor der Tür
+steht. Die anderen schnütteln nur den Kopf. Keiner weiß, was Sache ist.
+"Schon wieder eine Blase!" 
+**Swiss World Teamup** bringt ein wenig [Licht ins Dunkel](https://lyrxp2p.com/#scalability).
+
+---
+
+## "It's all too slow!"  ##
+### Why we should think about scalability in the crypto area  ###
+
+Opinions are divided on the subject of cryptocurrencies. Some are sure that the future is just around the corner
+stands. The others just shake their heads. Nobody knows what is going on.
+"Another bubble!" 
+** Swiss World Teamup ** brings a little [light into the dark] (https://lyrxp2p.com/#scalability).
+
+--- 
+
 ## Was Skalierbarkeit im Kryptowährungsraum bedeutet ##
 
 Einerseits ist der Blockchain-Bereich gerade einer der vielversprechendsten im Technologiebereich. Andererseits zeigt
@@ -90,12 +111,12 @@ to many different factors, not just software quality as it usually is measured.
 
 ---
 
-Ein gutes Beispiel sind die sogenannten [CrypoKitties](https://www.cryptokitties.co/) auf der Ethereum-Platform. Ethereum ist ein Projekt, das nach
-Methode **1** entwickelt wurde, also auf der grünen Wiese, von Anfang an -- und damit nicht auf Basis von Bitcoin. Hier
-war nun zum ersten Mal etwas gegeben, das eine größere Aufmerksamkeit erregte und viele Käufer anzog. Die unmittelbare
-Folge aber war, dass die Platform nicht die nötige Bandbreite zur Verfügung stellen konnte. All die tollen Ideen, all
-die vielen neuen Ansätze hatten also nicht geholfen. Die Platform war dem Ansturm nicht gewachsen. Sie wurde viel zu
-langsam.
+Ein gutes Beispiel sind die sogenannten [CrypoKitties](https://www.cryptokitties.co/) auf der Ethereum-Platform.
+Ethereum ist ein Projekt, das nach Methode **1** entwickelt wurde, also auf der grünen Wiese, von Anfang an -- und damit
+nicht auf Basis von Bitcoin. Hier war nun zum ersten Mal etwas gegeben, das eine größere Aufmerksamkeit erregte und
+viele Käufer anzog. Die unmittelbare Folge aber war, dass die Platform nicht die nötige Bandbreite zur Verfügung stellen
+konnte. All die tollen Ideen, all die vielen neuen Ansätze hatten also nicht geholfen. Die Platform war dem Ansturm
+nicht gewachsen. Sie wurde viel zu langsam.
 
 Skalierbare Software ist keinesfalls nur das Ergebnis grossartiger Ingenieurskunst, sondern das Ende eines
 Reifungsprozesses -- um nicht zu sagen, das Resultat eines **evolutionären** Prozesses, der nicht so viel mit
@@ -103,11 +124,11 @@ technischer Brillianz zu tun haben muss.
 
 ---
 
-A good example are the so-called [CrypoKitties](https://www.cryptokitties.co/) on the Ethereum platform. Ethereum is a project that was developed
-according to method **1**, i.e. from scratch - and therefore not based on Bitcoin. Here for the first time something
-caught greater attention and attracted more buyers than ever before. The immediate consequence, however, was that the
-platform could not provide the needed bandwidth. All the great ideas, all the many new approaches hadn't helped. The
-platform was not up to the onslaught. It got way too slow.
+A good example are the so-called [CrypoKitties](https://www.cryptokitties.co/) on the Ethereum platform. Ethereum is a
+project that was developed according to method **1**, i.e. from scratch - and therefore not based on Bitcoin. Here for
+the first time something caught greater attention and attracted more buyers than ever before. The immediate consequence,
+however, was that the platform could not provide the needed bandwidth. All the great ideas, all the many new approaches
+hadn't helped. The platform was not up to the onslaught. It got way too slow.
 
 Scalable software is by no means just the result of great engineering, but the outcome of a maturation process - not to
 say the result of an **evolutionary** process. That doesn't need to be related to technical brilliance.
@@ -124,9 +145,9 @@ daherkommt, muss sich dennoch an ganz einfachen Maßstäben messen lassen.
 ---
 
 Credit card companies and even traditional banking transactions are therefore still ahead of the game. It can be
-foreseen that this will remain so until cryptocurrencies achieved the much needed technical maturity. That in turn
-will be the case if and when they can provide higher transaction rates. What initially comes across as "super
-smart" still can be measured by very simple standards.
+foreseen that this will remain so until cryptocurrencies achieved the much needed technical maturity. That in turn will
+be the case if and when they can provide higher transaction rates. What initially comes across as "super smart" still
+can be measured by very simple standards.
 
 
 

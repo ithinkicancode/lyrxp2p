@@ -21,6 +21,11 @@ import slinky.web.html.{className => cls}
   def renderDE() = div(cls := "inner",
     ul(cls := "icons",
       li(
+        a(href := "https://alexander-weinmann.medium.com/", cls := "icon brands alt fa-medium",
+          span(cls := "label", "Medium")
+        )
+      ),
+      li(
         a(href := s"mailto:${WhereAreWe.mail}?subject=Swiss%20World%20Teamup", className := "icon solid alt fa-envelope",
           span(cls := "label", "Mail")
         )
@@ -56,6 +61,11 @@ import slinky.web.html.{className => cls}
 
   def renderEN() = div(cls := "inner",
     ul(cls := "icons",
+      li(
+        a(href := "https://alexander-weinmann.medium.com/", cls := "icon brands alt fa-medium",
+          span(cls := "label", "Medium")
+        )
+      ),
       li(
         a(href := "https://twitter.com/lyrx2010", cls := "icon brands alt fa-twitter",
           span(cls := "label", "Twitter")
