@@ -88,9 +88,9 @@ scalability. Scalability is by no means only achieved by involving the brightest
 something the world has never seen before. Rather, if that software is finally becoming fast and stable, it will be due
 to many different factors, not just software quality as it usually is measured.
 
---
+---
 
-Ein gutes Beispiel sind die sogenannten [CrypoKitties] auf der Ethereum-Platform. Ethereum ist ein Projekt, das nach
+Ein gutes Beispiel sind die sogenannten [CrypoKitties](https://www.cryptokitties.co/) auf der Ethereum-Platform. Ethereum ist ein Projekt, das nach
 Methode **1** entwickelt wurde, also auf der grünen Wiese, von Anfang an -- und damit nicht auf Basis von Bitcoin. Hier
 war nun zum ersten Mal etwas gegeben, das eine größere Aufmerksamkeit erregte und viele Käufer anzog. Die unmittelbare
 Folge aber war, dass die Platform nicht die nötige Bandbreite zur Verfügung stellen konnte. All die tollen Ideen, all
@@ -103,7 +103,7 @@ technischer Brillianz zu tun haben muss.
 
 ---
 
-A good example are the so-called [CrypoKitties] on the Ethereum platform. Ethereum is a project that was developed
+A good example are the so-called [CrypoKitties](https://www.cryptokitties.co/) on the Ethereum platform. Ethereum is a project that was developed
 according to method **1**, i.e. from scratch - and therefore not based on Bitcoin. Here for the first time something
 caught greater attention and attracted more buyers than ever before. The immediate consequence, however, was that the
 platform could not provide the needed bandwidth. All the great ideas, all the many new approaches hadn't helped. The
@@ -111,6 +111,8 @@ platform was not up to the onslaught. It got way too slow.
 
 Scalable software is by no means just the result of great engineering, but the outcome of a maturation process - not to
 say the result of an **evolutionary** process. That doesn't need to be related to technical brilliance.
+
+
 
 ---
 
@@ -124,7 +126,8 @@ daherkommt, muss sich dennoch an ganz einfachen Maßstäben messen lassen.
 Credit card companies and even traditional banking transactions are therefore still ahead of the game. It can be
 foreseen that this will remain so until cryptocurrencies achieved the much needed technical maturity. That in turn
 will be the case if and when they can provide higher transaction rates. What initially comes across as "super
-smart" still can be based measured by very simple standards.
+smart" still can be measured by very simple standards.
 
 
-[CrypoKitties]: https://www.cryptokitties.co/
+
+

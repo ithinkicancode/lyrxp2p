@@ -7,14 +7,7 @@ import slinky.core.facade.ReactElement
 
 object AppProps {
 
-  val pages = Seq(
-    Change.page,
-    Landing.page,
-    Tomorrow.page,
-    WhereAreWe.page,
-    FreeConsulting.page,
-    Scalability.page
-  )
+
 
   def getComponent(props: AppProps): ReactElement = props match {
 
@@ -43,8 +36,7 @@ object AppProps {
 
   def INITPROPS(): AppProps = {
     val h: String = s"${window.location.hash.stripPrefix("#")}.html"
-    AppProps(currentLang = "",
-      page = if (pages.contains(h)) h else Landing.page)
+    AppProps(currentLang = "", page = h)
   }
 
 }
