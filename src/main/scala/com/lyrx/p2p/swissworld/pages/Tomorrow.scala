@@ -24,8 +24,7 @@ object Tomorrow {
   def renderDE() = Fragment(
 
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Morgen")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Morgen")
     ),
     MarkdownLoader("md/swissworld/pages/tomorrow.md")
 
@@ -33,8 +32,7 @@ object Tomorrow {
 
   def renderEN() = Fragment(
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Tomorrow")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Tomorrow")
     ),
     MarkdownLoader("md/swissworld/pages/tomorrow_en.md")
 

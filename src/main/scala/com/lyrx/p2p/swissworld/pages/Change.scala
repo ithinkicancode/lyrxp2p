@@ -25,8 +25,7 @@ object Change {
 
   def renderDE() = Fragment(
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Wandel")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Wandel")
     ),
     MarkdownLoader("md/swissworld/pages/change.md"),
     p("Und ", a(href := Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("morgen"), " die ganze Welt ...")
@@ -35,8 +34,7 @@ object Change {
 
   def renderEN() = Fragment(
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Change")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Change")
     ),
     MarkdownLoader("md/swissworld/pages/change_en.md"),
     p("And ", a(href := Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("tomorrow"), " the whole world ...")

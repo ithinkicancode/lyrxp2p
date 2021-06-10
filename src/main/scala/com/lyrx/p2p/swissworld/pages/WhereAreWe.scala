@@ -26,23 +26,21 @@ object WhereAreWe {
   def renderDE() = Fragment(
 
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Wo wir sind")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Wo wir jetzt sind")
     ),
     MarkdownLoader("md/swissworld/pages/whereweare.md")
     ,
-    p("Und nun kommt der ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("Wandel"))
+    p("Und nun kommt der ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("Wandel ..."))
 
   )
 
   def renderEN() = Fragment(
     header(className := "major",
-      h2(s"${Phrases.COMPANY}"),
-      h3("Where we are")
+      h2(s"${Phrases.COMPANY.toUpperCase()}: Where we are now")
     ),
     MarkdownLoader("md/swissworld/pages/whereweare_en.md")
     ,
-    p("Here comes the ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("change"))
+    p("Here comes ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("change ..."))
 
   )
 
