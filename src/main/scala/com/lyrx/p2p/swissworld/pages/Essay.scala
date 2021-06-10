@@ -10,8 +10,8 @@ import slinky.web.html._
 object Essay{
   def createEssay(a: AppProps,name:String) = Essay(
     appProps  = a,
-    mdUrl = s"md/swissworld/${Phrases.toName(name)}.md",
-    Seq(s"images/swissworld/${Phrases.toName(name)}.jpg")
+    mdUrl = s"md/swissworld/essays/${Phrases.toName(name)}.md",
+    Seq(s"images/swissworld/essays/${Phrases.toName(name)}.jpg")
   )
 }
 
