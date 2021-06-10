@@ -101,6 +101,7 @@ import scala.scalajs.js
     )else Fragment()):Option[ReactElement],
     state.textOpt.map(t => markdown(t)),
     nav(),
-
   )
+
+
 }

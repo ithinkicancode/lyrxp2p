@@ -8,11 +8,20 @@ import slinky.web.html._
 
 
 object Essay{
-  def createEssay(a: AppProps,name:String) = Essay(
-    appProps  = a,
-    mdUrl = s"md/swissworld/essays/${Phrases.toName(name)}.md",
-    Seq(s"images/swissworld/essays/${Phrases.toName(name)}.jpg")
-  )
+  def createEssay(a: AppProps,name:String) = create(
+    a,
+    name,
+    "essays")
+
+  def create(a: AppProps,name:String,aCategory:String) =
+    Essay(
+      appProps  = a,
+      mdUrl = s"md/swissworld/${aCategory}/${Phrases.toName(name)}.md",
+      Seq(s"images/swissworld/${aCategory}/${Phrases.toName(name)}.jpg")
+    )
+
+
+
 }
 
 @react class Essay extends Component {
