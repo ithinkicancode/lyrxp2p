@@ -1,6 +1,6 @@
 package com.lyrx.p2p.rwanda
 
-import com.lyrx.p2p.AppState
+import com.lyrx.p2p.{AppProps, AppState}
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.core.facade.ReactElement
@@ -17,7 +17,7 @@ import slinky.core.facade.ReactElement
 
 
 
-  def render():ReactElement = AppProps.getComponent(props)
+  def render():ReactElement = ComponentConfiguration.getComponent(props)
 
 
 

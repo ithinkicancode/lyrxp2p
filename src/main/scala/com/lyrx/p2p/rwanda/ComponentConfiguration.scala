@@ -1,10 +1,12 @@
 package com.lyrx.p2p.rwanda
 
+import com.lyrx.p2p.AppProps
 import com.lyrx.p2p.rwanda.pages.{Catherine, Claudine, Landing}
 import org.scalajs.dom.window
 import slinky.core.facade.ReactElement
 
-object AppProps {
+object ComponentConfiguration {
+
 
   val pages = Seq(
     Catherine.page,
@@ -24,19 +26,3 @@ object AppProps {
   }
 
 }
-
-
-case class AppProps(currentLang: String, page: String) {
-
-  def isGerman(): Boolean = currentLang.toLowerCase.startsWith("de")
-
-
-  def switchLanguage() =
-    if (isGerman())
-      this.copy(currentLang = "EN")
-    else
-      this.copy(currentLang = "DE")
-
-
-}
-

@@ -1,7 +1,7 @@
 package com.lyrx.p2p.swissworld
 
 import com.lyrx.p2p.swissworld.pages.{Articles, Change, Landing, Tomorrow, WhereAreWe}
-import com.lyrx.p2p.AppState
+import com.lyrx.p2p.{AppProps, AppState}
 import slinky.core.Component
 import slinky.core.annotations.react
 import slinky.core.facade.Fragment

@@ -1,5 +1,6 @@
 package com.lyrx.p2p.swissworld
 
+import com.lyrx.p2p.AppProps
 import com.lyrx.p2p.swissworld.pages.{Change, Landing, Tomorrow, WhereAreWe}
 import org.scalajs.dom
 import org.scalajs.dom.raw.Element
@@ -71,7 +72,7 @@ object Main {
       contact = contactElement,
       footer = footerElement,
       pageTitle = pageTitleElement,
-      appProps = findLanguage(AppProps.INITPROPS()))
+      appProps = findLanguage(ComponentConfiguration.INITPROPS()))
   }
 
   def doRender(): Unit = {

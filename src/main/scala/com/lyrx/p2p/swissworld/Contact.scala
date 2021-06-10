@@ -1,6 +1,6 @@
 package com.lyrx.p2p.swissworld
 
-import com.lyrx.p2p.AppState
+import com.lyrx.p2p.{AppProps, AppState}
 import com.lyrx.p2p.Helpers.mail
 import com.lyrx.p2p.swissworld.pages.{FreeConsulting, WhereAreWe}
 import slinky.core.Component

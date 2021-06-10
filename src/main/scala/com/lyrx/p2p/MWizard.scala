@@ -1,7 +1,6 @@
 package com.lyrx.p2p
 
 import com.lyrx.p2p.Helpers._
-import com.lyrx.p2p.swissworld.AppProps
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.core.facade.{Fragment, ReactElement}

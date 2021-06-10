@@ -1,5 +1,6 @@
 package com.lyrx.p2p.rwanda
 
+import com.lyrx.p2p.AppProps
 import com.lyrx.p2p.rwanda.pages.Landing
 import org.scalajs.dom
 import org.scalajs.dom.raw.Element
@@ -7,7 +8,7 @@ import org.scalajs.dom.window
 import slinky.hot
 import slinky.web.ReactDOM
 
-import scala.scalajs.js.annotation.{JSExportTopLevel, JSImport}
+import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.{LinkingInfo, js}
 
 @JSImport("resources/css/index.css", JSImport.Default)
@@ -70,7 +71,7 @@ object Main {
       contact = contactElement,
       footer = footerElement,
       pageTitle = pageTitleElement,
-      appProps = findLanguage(AppProps.INITPROPS()))
+      appProps = findLanguage(ComponentConfiguration.INITPROPS()))
   }
 
   def doRender(): Unit = doRenderElements(initProps())

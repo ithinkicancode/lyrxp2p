@@ -1,7 +1,7 @@
 package com.lyrx.p2p.rwanda.pages
 
-import com.lyrx.p2p.{AppState, MArticle}
-import com.lyrx.p2p.rwanda.{AppProps, Contact,Main}
+import com.lyrx.p2p.{AppProps, AppState, MArticle}
+import com.lyrx.p2p.rwanda.{Contact, Main}
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.web.html._

@@ -1,7 +1,7 @@
 package com.lyrx.p2p.rwanda.pages
 
-import com.lyrx.p2p.AppState
-import com.lyrx.p2p.rwanda.{AppProps, MSection}
+import com.lyrx.p2p.{AppProps, AppState}
+import com.lyrx.p2p.rwanda.MSection
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.core.facade.Fragment

@@ -1,7 +1,6 @@
 package com.lyrx.p2p.swissworld.pages
 
-import com.lyrx.p2p.swissworld.AppProps
-import com.lyrx.p2p.{AppState, MWizard}
+import com.lyrx.p2p.{AppProps, AppState, MWizard}
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.web.html._
