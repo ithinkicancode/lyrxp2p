@@ -1,7 +1,7 @@
 package com.lyrx.p2p.swissworld.pages
 
 import com.lyrx.p2p.Helpers._
-import com.lyrx.p2p.{AppProps, AppState, MarkdownLoader}
+import com.lyrx.p2p.{AppProps, AppState, Helpers, MarkdownLoader}
 import com.lyrx.p2p.swissworld.Main.showTomorrow
 import com.lyrx.p2p.swissworld.Phrases
 import slinky.core._
@@ -28,7 +28,7 @@ object Change {
       h2(s"${Phrases.COMPANY.toUpperCase()}: Wandel")
     ),
     MarkdownLoader("md/swissworld/pages/change.md"),
-    p("Und ", a(href := Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("morgen"), " die ganze Welt ...")
+    p("Und ", a(href := Helpers.toHash(Tomorrow.page), onClick := showTomorrow(props))("morgen"), " die ganze Welt ...")
   )
 
 
@@ -37,7 +37,7 @@ object Change {
       h2(s"${Phrases.COMPANY.toUpperCase()}: Change")
     ),
     MarkdownLoader("md/swissworld/pages/change_en.md"),
-    p("And ", a(href := Phrases.toHash(Tomorrow.page), onClick := showTomorrow(props))("tomorrow"), " the whole world ...")
+    p("And ", a(href := Helpers.toHash(Tomorrow.page), onClick := showTomorrow(props))("tomorrow"), " the whole world ...")
   )
 
 

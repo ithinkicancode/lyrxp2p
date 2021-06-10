@@ -59,6 +59,11 @@ object Helpers {
   }
 
 
+  def toHash(s:String) = s"#${toName(s)}"
+
+  def toName(s:String) = s"${s.stripSuffix(".html")}"
+
+
 
 
 }

@@ -1,6 +1,6 @@
 package com.lyrx.p2p.swissworld
 
-import com.lyrx.p2p.{AppProps, AppState}
+import com.lyrx.p2p.{AppProps, AppState, Helpers}
 import com.lyrx.p2p.Helpers.mail
 import com.lyrx.p2p.swissworld.pages.{FreeConsulting, WhereAreWe}
 import slinky.core.Component
@@ -29,7 +29,7 @@ import scala.scalajs.js.Dynamic.literal
   def consulting(s:String)=
     span(className := "icon solid alt fa-calendar")(
       a(//href := "https://calendly.com/a-weinmann/30min",
-        href := Phrases.toHash(FreeConsulting.page),
+        href := Helpers.toHash(FreeConsulting.page),
         onClick :=((e)=>{
           e.stopPropagation()
           Main.toPage(props,FreeConsulting.page)

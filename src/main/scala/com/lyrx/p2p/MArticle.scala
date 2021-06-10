@@ -22,7 +22,7 @@ import scala.scalajs.js.Dynamic.literal
 
 
   def render() = {
-    val newHash = Phrases.toHash(props.aPage)
+    val newHash = Helpers.toHash(props.aPage)
     article(
       header(className := "major")(
         h3(a(

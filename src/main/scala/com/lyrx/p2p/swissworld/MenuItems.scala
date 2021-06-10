@@ -1,7 +1,7 @@
 package com.lyrx.p2p.swissworld
 
 import com.lyrx.p2p.swissworld.pages.{Articles, Change, Landing, Tomorrow, WhereAreWe}
-import com.lyrx.p2p.{AppProps, AppState}
+import com.lyrx.p2p.{AppProps, AppState, Helpers}
 import slinky.core.Component
 import slinky.core.annotations.react
 import slinky.core.facade.Fragment
@@ -18,7 +18,7 @@ import slinky.web.html.{a, href, li, onClick}
   def render() = if (props.isGerman()) renderDE() else renderEN()
 
 
-  def linkItem(page: String, text: String) = li()(a(href := Phrases.toHash(page), onClick := ((e) => {
+  def linkItem(page: String, text: String) = li()(a(href := Helpers.toHash(page), onClick := ((e) => {
     e.stopPropagation()
     Main.toPage(props, page)
   }))(text))

@@ -1,7 +1,5 @@
-package com.lyrx.p2p.swissworld.pages
+package com.lyrx.p2p
 
-import com.lyrx.p2p.swissworld.Phrases
-import com.lyrx.p2p.{AppProps, AppState, MWizard}
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.web.html._
@@ -16,8 +14,8 @@ object Essay{
   def create(a: AppProps,name:String,aCategory:String) =
     Essay(
       appProps  = a,
-      mdUrl = s"md/swissworld/${aCategory}/${Phrases.toName(name)}.md",
-      Seq(s"images/swissworld/${aCategory}/${Phrases.toName(name)}.jpg")
+      mdUrl = s"md/swissworld/${aCategory}/${Helpers.toName(name)}.md",
+      Seq(s"images/swissworld/${aCategory}/${Helpers.toName(name)}.jpg")
     )
 
 

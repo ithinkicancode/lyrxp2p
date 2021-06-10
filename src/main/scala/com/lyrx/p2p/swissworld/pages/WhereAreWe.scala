@@ -1,7 +1,7 @@
 package com.lyrx.p2p.swissworld.pages
 
 import com.lyrx.p2p.Helpers._
-import com.lyrx.p2p.{AppProps, AppState, MarkdownLoader}
+import com.lyrx.p2p.{AppProps, AppState, Helpers, MarkdownLoader}
 import com.lyrx.p2p.swissworld.Main.showChange
 import com.lyrx.p2p.swissworld.Phrases
 import slinky.core._
@@ -30,7 +30,7 @@ object WhereAreWe {
     ),
     MarkdownLoader("md/swissworld/pages/whereweare.md")
     ,
-    p("Und nun kommt der ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("Wandel ..."))
+    p("Und nun kommt der ", a(href := Helpers.toHash(Change.page), onClick := showChange(props))("Wandel ..."))
 
   )
 
@@ -40,7 +40,7 @@ object WhereAreWe {
     ),
     MarkdownLoader("md/swissworld/pages/whereweare_en.md")
     ,
-    p("Here comes ", a(href := Phrases.toHash(Change.page), onClick := showChange(props))("change ..."))
+    p("Here comes ", a(href := Helpers.toHash(Change.page), onClick := showChange(props))("change ..."))
 
   )
 

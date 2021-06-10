@@ -1,7 +1,7 @@
 package com.lyrx.p2p.swissworld
 
-import com.lyrx.p2p.AppProps
-import com.lyrx.p2p.swissworld.pages.{Articles, Change, Essay, FreeConsulting, Landing, Tomorrow, WhereAreWe}
+import com.lyrx.p2p.{AppProps, Essay}
+import com.lyrx.p2p.swissworld.pages.{Articles, Change, FreeConsulting, Landing, Tomorrow, WhereAreWe}
 import org.scalajs.dom.window
 import slinky.core.facade.ReactElement
 
