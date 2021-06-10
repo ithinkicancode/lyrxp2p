@@ -23,14 +23,14 @@ import slinky.web.html._
       className := "logo",
       onClick := showLanding(props))
     (
-      strong(s"${Phrases.M.get("de").get("title")}")), span())
+      strong(s"Swiss World")), span("Teamup"))
 
 
   def renderEN() = Fragment(
     a(href := "#",
       className := "logo",
       onClick := showLanding(props))(
-      strong(s"${Phrases.M.get("en").get("title")}")), span())
+      strong(s"Swiss World")), span("Teamup"))
 
 
 }
