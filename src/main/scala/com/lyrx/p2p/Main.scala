@@ -5,5 +5,5 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 object Main {
 
   @JSExportTopLevel("main")
-  def main(): Unit = com.lyrx.p2p.rwanda.Main.startup()
+  def main(): Unit = com.lyrx.p2p.swissworld.Main.startup()
 }

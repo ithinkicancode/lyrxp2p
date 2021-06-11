@@ -21,8 +21,20 @@ import scala.concurrent.ExecutionContext
   def load()=loadString(props.url).map(
     (s: String) => setState(State(s)))
 
-  override def componentDidUpdate(prevProps: Props, prevState: State): Unit = load()
+  override def componentDidUpdate(prevProps: Props, prevState: State): Unit = {
+
+    if (
+      (prevProps.url != props.url)
+        ||
+        (state.text != prevState.text)
+    )
+    load()
+  }
   override def componentDidMount(): Unit = load()
+  override def componentWillUnmount(): Unit = {
+
+  }
+
 
 
   def render() = state.text.md()

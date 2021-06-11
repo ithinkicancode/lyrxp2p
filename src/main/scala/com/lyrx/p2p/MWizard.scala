@@ -17,6 +17,11 @@ import scala.scalajs.js
   override def initialState: State = State(textOpt = None, page = 0, pageCount = 0)
 
   override def componentDidMount(): Unit = loadData()
+  override def componentWillUnmount(): Unit = {
+
+  }
+
+
 
   def loadData(): Future[Unit] = loadString(
     props.url).map(s => {
@@ -33,11 +38,16 @@ import scala.scalajs.js
     ))
   })(ExecutionContext.global)
 
-  override def componentDidUpdate(prevProps: Props, prevState: State): Unit = if (
-    (prevProps.appProps.currentLang != props.appProps.currentLang)
-      ||
-      (state.page != prevState.page)
-  ) loadData()
+  override def componentDidUpdate(prevProps: Props, prevState: State): Unit = {
+
+    if (
+      (prevProps.appProps.currentLang != props.appProps.currentLang)
+        ||
+        (state.page != prevState.page)
+    ) loadData()
+  }
+
+
 
   def nav() = {
     val maxPage: Int = state.pageCount
