@@ -15,7 +15,12 @@ import slinky.web.html._
   def initialState = AppState("")
 
 
-  def render() = a(href:="#",onClick := (()=>Main.switchLanguage(props)))(
+  def render() = a(href:="#",onClick := ((e)=>{
+    e.stopPropagation()
+    e.preventDefault()
+
+    Main.switchLanguage(props)
+  }))(
     if(props.isGerman()
     )
       s"[EN]" else s"[DE]"
