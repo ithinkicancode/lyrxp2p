@@ -15,7 +15,7 @@ import slinky.core.facade.Fragment
 
 
   def render() =  Fragment(
-      """Einmal für immer und dann nimmermehr"""   )
+      """Texte für den  Alltag"""   )
 
 
 }

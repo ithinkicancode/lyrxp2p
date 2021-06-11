@@ -25,6 +25,11 @@ object Helpers {
       dom.document.getElementById(t._2))
   )
 
+  def renderMainElement(element:ReactElement
+    )= ReactDOM.render(element,dom.document.getElementById("main"))
+
+
+
   def italic(s:String) =  span(style:=literal(fontStyle="italic"))(s)
   def mail(mailAddress:String,subject:String,text:String) ={
 

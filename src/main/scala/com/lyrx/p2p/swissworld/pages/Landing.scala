@@ -9,8 +9,8 @@ import slinky.core.facade.Fragment
 import slinky.web.html._
 
 
-object Landing{
-  val page:String= "landing.html"
+object Landing {
+  val page: String = "landing.html"
 
 }
 
@@ -19,16 +19,16 @@ object Landing{
   type State = AppState
   type Props = AppProps
 
-  def initialState= AppState("")
+  def initialState = AppState("")
 
 
   def fragments(titles: Seq[String], parsArray: Seq[Seq[String]]) = Fragment(
     Contact(props)
     ,
-    MArticle(action  = (()=>Main.toPage(props,  WhereAreWe.page)),  text = titles(0), parsArray(0),aPage =WhereAreWe.page ),
-    MArticle(action = (()=>Main.toPage(props,   Change.page)),  text = titles(1), parsArray(1),aPage = Change.page),
-    MArticle(action = (()=>Main.toPage(props, Tomorrow.page)),  text = titles(2), parsArray(2),aPage =Tomorrow.page),
-    MArticle(action = (()=>Main.toPage(props, Articles.page)),  text = titles(3), parsArray(3),aPage =Articles.page),
+    MArticle(action = (() => Main.toPage(props, WhereAreWe.page)), text = titles(0), parsArray(0), aPage = WhereAreWe.page),
+    MArticle(action = (() => Main.toPage(props, Change.page)), text = titles(1), parsArray(1), aPage = Change.page),
+    MArticle(action = (() => Main.toPage(props, Tomorrow.page)), text = titles(2), parsArray(2), aPage = Tomorrow.page),
+    MArticle(action = (() => Main.toPage(props, Articles.page)), text = titles(3), parsArray(3), aPage = Articles.page),
 
 
   )
@@ -46,7 +46,8 @@ object Landing{
 
       Seq(
         """Heute die Schweiz ...
-          ""","""
+          """,
+        """
           ...  morgen die ganze Welt.
           """),
 
@@ -54,11 +55,12 @@ object Landing{
         """
         Wir integrieren ihre Geschäftsprozesse
 
-        ""","""
+        """,
+        """
         in die vernetzte Welt von morgen.
         """
       ),
-      Seq("Das Team klärt auf","... und bringt die Wahrheit zu Papier.")
+      Seq("Das Team klärt auf", "... und bringt die Wahrheit zu Papier.")
 
 
     ))
@@ -69,20 +71,23 @@ object Landing{
       s"${M("en")("topic1")}",
       s"${M("en")("topic2")}",
       s"${M("en")("topic3")}",
-    "We write"),
+      "We write"),
     Seq(
-      Seq("""
+      Seq(
+        """
        Nothing stays the same.
 
       """,
-      """
+        """
        It will never  be the way it used to be.
       """),
-      Seq("""
+      Seq(
+        """
       Today it is just Switzerland.""",
-      """
+        """
       Tomorrow it will be the whole world."""),
-      Seq("""
+      Seq(
+        """
 
       We will integrate your business processes
 
@@ -90,7 +95,7 @@ object Landing{
       into tomorrow's distributed environments.
 
       """),
-       Seq("THE TEAM EDUCATES","... AND PUT THE TRUTH ON PAPER.")
+      Seq("THE TEAM EDUCATES", "... AND PUT THE TRUTH ON PAPER.")
 
     ))
 
