@@ -1,7 +1,7 @@
 package com.lyrx.p2p.rwanda
 
+import com.lyrx.p2p.rwanda.pages._
 import com.lyrx.p2p.{AppProps, AppState}
-import com.lyrx.p2p.rwanda.pages.{Catherine, Claudine, Landing}
 import slinky.core._
 import slinky.core.annotations.react
 import slinky.core.facade.Fragment
@@ -19,26 +19,35 @@ import slinky.web.html._
   def render() = if (props.isGerman()) renderDE() else renderEN()
 
 
-  def linkItem(page: String, text: String) = li()(a(href := "#", onClick := ((e) => {
+  def linkItem(page: String, text: String) = li(
+    key:=text.hashCode().toString()
+
+  )(a(href := "#", onClick := ((e) => {
     e.stopPropagation()
     Main.toPage(props, page)
   }))(text))
 
+
+  def women()=Seq(
+    linkItem(page = Catherine.page, text = "Catherine"),
+    linkItem(page = Claudine.page, text = "Claudine"),
+    linkItem(page = Francine.page, text = "Francine"),
+    linkItem(page = Charlotte.page, text = "Charlotte")
+  )
+
+
   def renderDE() =
     Fragment(
       linkItem(page = Landing.page, text = "Start"),
-      linkItem(page = Catherine.page, text = "Catherine"),
-       linkItem(page = Claudine.page, text = "Claudine")
+      women()
+
     )
-
-
 
 
   def renderEN() =
     Fragment(
       linkItem(page = Landing.page, text = "Home"),
-      linkItem(page = Catherine.page, text = "Catherine"),
-      linkItem(page = Claudine.page, text = "Claudine")
+      women()
     )
 
 

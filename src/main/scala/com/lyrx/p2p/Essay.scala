@@ -6,16 +6,19 @@ import slinky.web.html._
 
 
 object Essay{
-  def createEssay(a: AppProps,name:String) = create(
+  def createEssay(a: AppProps,name:String,aApp:String,tOpt:Option[String]) = create(
     a,
     name,
-    "essays")
+    aCategory = "essays",
+  app = aApp,
+    tOpt)
 
-  def create(a: AppProps,name:String,aCategory:String) =
+  def create(a: AppProps,name:String,aCategory:String,app:String,tOpt:Option[String]) =
     Essay(
       appProps  = a,
-      mdUrl = s"md/swissworld/${aCategory}/${Helpers.toName(name)}.md",
-      Seq(s"images/swissworld/${aCategory}/${Helpers.toName(name)}.jpg")
+      mdUrl = s"md/${app}/${aCategory}/${Helpers.toName(name)}.md",
+      Seq(s"images/${app}/${aCategory}/${Helpers.toName(name)}.jpg"),
+      aTitleOpt = tOpt
     )
 
 
@@ -25,7 +28,7 @@ object Essay{
 @react class Essay extends Component {
 
 
-  case class Props (appProps: AppProps,mdUrl:String,images:Seq[String])
+  case class Props (appProps: AppProps,mdUrl:String,images:Seq[String],aTitleOpt:Option[String])
   type State = AppState
   override def initialState: State = AppState("")
 
@@ -34,7 +37,7 @@ object Essay{
     MWizard(props.appProps,
       url =  props.mdUrl,
       imageUrls=props.images,
-      titleOpt=None,
+      titleOpt=props.aTitleOpt,
       isDual = true),
   )
 

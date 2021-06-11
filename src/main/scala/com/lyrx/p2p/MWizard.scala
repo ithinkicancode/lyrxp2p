@@ -94,10 +94,13 @@ import scala.scalajs.js
 
   def render() = div(className := "inner")(
     nav(),
-    currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
-    props.titleOpt.map(t=>if(state.page == 0)header(className := "major",
+
+     props.titleOpt.map(t=>if(state.page == 0)header(className := "major",
       h2(t),
     )else Fragment()):Option[ReactElement],
+    currentImage().map((url:String)=>span(className := "image main")(img(src := url))),
+
+
     state.textOpt.map(t => markdown(t)),
     nav(),
   )

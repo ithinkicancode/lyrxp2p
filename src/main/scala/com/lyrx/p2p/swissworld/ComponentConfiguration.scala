@@ -33,7 +33,7 @@ object ComponentConfiguration {
 
 
     case AppProps(_, s:String)
-    => Essay.createEssay(props,s)
+    => Essay.createEssay(props,s,"swissworld",None)
 
 
     case _ => Landing(props)

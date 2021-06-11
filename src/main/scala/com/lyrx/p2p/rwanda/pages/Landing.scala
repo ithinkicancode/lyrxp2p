@@ -35,6 +35,16 @@ object Landing{
       text = "Claudine",
       pars = Seq("A woman never seen before."),
       aPage = Claudine.page),
+    MArticle(action = (()=>Main.toPage(props,  Francine.page)),
+      text = "Francine",
+      pars = Seq("[TODO]"),
+      aPage = Francine.page),
+    MArticle(action = (()=>Main.toPage(props,  Charlotte.page)),
+      text = "Charlotte",
+      pars = Seq("[TODO]"),
+      aPage = Charlotte.page),
+
+
 
 
   )
