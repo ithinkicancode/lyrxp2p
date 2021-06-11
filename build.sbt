@@ -6,11 +6,12 @@ scalaVersion := "2.13.2"
 Compile / npmDependencies ++= Seq(
   "react" -> "16.13.1",
   "react-dom" -> "16.13.1",
+  "react-router" -> "5.2.0",
   "react-proxy" -> "1.1.8",
   "showdown" -> "1.9.1",
   "@types/showdown" -> "1.9.3")
 
-stIgnore ++= List("react","react-dom","react-proxy")
+stIgnore ++= List("react","react-dom","react-proxy", "react-router")
 
 
 
@@ -25,6 +26,7 @@ Compile / npmDevDependencies ++= Seq(
 
 libraryDependencies += "me.shadaj" %%% "slinky-web" % "0.6.5"
 libraryDependencies += "me.shadaj" %%% "slinky-hot" % "0.6.5"
+libraryDependencies += "me.shadaj" %%% "slinky-react-router" % "0.6.5"
 libraryDependencies += "org.scalatest" %%% "scalatest" % "3.1.1" % Test
 
 scalacOptions += "-Ymacro-annotations"
