@@ -26,7 +26,7 @@ object WhereAreWe {
   def renderDE() = Fragment(
 
     header(className := "major",
-      h2(s"${Phrases.COMPANY.toUpperCase()}: Wo wir jetzt sind")
+      h2(s"Wo wir jetzt sind")
     ),
     MarkdownLoader("md/swissworld/pages/whereweare.md")
     ,
