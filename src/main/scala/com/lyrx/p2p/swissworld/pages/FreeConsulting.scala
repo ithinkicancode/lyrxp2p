@@ -44,7 +44,7 @@ object FreeConsulting {
   def renderDE() = section(id := "one")(
     MWizard(props,
       url = myurl(),
-      imageUrls= Seq(myimg()),
+      maybeImages= Seq(Some(myimg())),
       titleOpt=None,
       isDual = true),
     div(className := "inner")(termin())
@@ -54,7 +54,7 @@ object FreeConsulting {
   def renderEN() = section(id := "one")(
     MWizard(props,
       url =  myurl(),
-      imageUrls=Seq(myimg()),
+      maybeImages=Seq(Some(myimg())),
       titleOpt=None,
       isDual = true),
     div(className := "inner")(termin())

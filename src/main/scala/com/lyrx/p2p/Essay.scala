@@ -17,7 +17,7 @@ object Essay{
     Essay(
       appProps  = a,
       mdUrl = s"md/${app}/${aCategory}/${Helpers.toName(name)}.md",
-      Seq(s"images/${app}/${aCategory}/${Helpers.toName(name)}.jpg"),
+      Seq(Some(s"images/${app}/${aCategory}/${Helpers.toName(name)}.jpg")),
       aTitleOpt = tOpt
     )
 
@@ -28,7 +28,7 @@ object Essay{
 @react class Essay extends Component {
 
 
-  case class Props (appProps: AppProps,mdUrl:String,images:Seq[String],aTitleOpt:Option[String])
+  case class Props (appProps: AppProps,mdUrl:String,maybeImages:Seq[Option[String]],aTitleOpt:Option[String])
   type State = AppState
   override def initialState: State = AppState("")
 
@@ -36,7 +36,7 @@ object Essay{
   def render() = section(id := "one")(
     MWizard(props.appProps,
       url =  props.mdUrl,
-      imageUrls=props.images,
+      maybeImages=props.maybeImages,
       titleOpt=props.aTitleOpt,
       isDual = true),
   )

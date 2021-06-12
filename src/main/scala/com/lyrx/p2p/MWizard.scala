@@ -12,7 +12,7 @@ import scala.scalajs.js
 
 @react class MWizard extends Component {
 
-  case class Props(appProps: AppProps, url: String, imageUrls: Seq[String], titleOpt: Option[String],isDual:Boolean)
+  case class Props(appProps: AppProps, url: String, maybeImages: Seq[Option[String]], titleOpt: Option[String],isDual:Boolean)
   case class State(textOpt: Option[String], page: Int, pageCount: Int)
   override def initialState: State = State(textOpt = None, page = 0, pageCount = 0)
 
@@ -96,7 +96,7 @@ import scala.scalajs.js
     )
   }
 
-  def currentImage()=props.imageUrls.lift(state.page)
+  def currentImage()=props.maybeImages(state.page)
 
 
 
