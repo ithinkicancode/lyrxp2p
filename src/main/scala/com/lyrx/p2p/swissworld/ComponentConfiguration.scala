@@ -41,9 +41,5 @@ object ComponentConfiguration {
 
 
 
-  def INITPROPS(): AppProps = {
-    val h: String = s"${window.location.hash.stripPrefix("#")}.html"
-    AppProps(currentLang = "", page = h)
-  }
 
 }

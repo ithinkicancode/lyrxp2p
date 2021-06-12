@@ -3,6 +3,7 @@ package com.lyrx.p2p
 
 import org.scalajs.dom
 import org.scalajs.dom.ext.Ajax
+import org.scalajs.dom.window
 import slinky.core.{BuildingComponent, KeyAndRefAddingStage}
 import slinky.core.facade.{Fragment, ReactElement}
 import slinky.web.ReactDOM
@@ -70,5 +71,9 @@ object Helpers {
 
 
 
+  def INITPROPS(): AppProps = {
+    val h: String = s"${window.location.hash.stripPrefix("#")}.html"
+    AppProps(currentLang = "", page = h)
+  }
 
 }

@@ -1,9 +1,10 @@
 package com.lyrx.p2p.creative
 
 
-import com.lyrx.p2p.Helpers
+import com.lyrx.p2p.creative.pages.Landing
+import com.lyrx.p2p.{AppProps, Helpers}
 import org.scalajs.dom
-import org.scalajs.dom.raw.{Element, HTMLAnchorElement, HTMLDivElement}
+import org.scalajs.dom.raw.{HTMLAnchorElement}
 import slinky.core.facade.ReactElement
 import slinky.hot
 
@@ -22,27 +23,25 @@ object Main {
     if (LinkingInfo.developmentMode) {
       hot.initialize()
     }
-    doRender()
+    doRender(Helpers.INITPROPS())
+    hide()
+  }
 
 
-
-
+  private def hide() = {
     val e: HTMLAnchorElement = dom.document.
       getElementById("menu-menu").
       asInstanceOf[HTMLAnchorElement]
     e.style.visibility = "hidden"
-
-
   }
 
-
-  def doRender(): Unit = {
-    Helpers.render(Seq[(ReactElement, String)](
+  def doRender(props:AppProps): Unit = Helpers.render(
+    Seq[(ReactElement, String)](
       (BannerTitle(), "banner-title"),
       (PageTitle(), "page-title"),
+      (Landing(props),"main")
     ))
 
-  }
 
 
 }

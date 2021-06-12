@@ -28,7 +28,10 @@ object Essay{
 @react class Essay extends Component {
 
 
-  case class Props (appProps: AppProps,mdUrl:String,maybeImages:Seq[Option[String]],aTitleOpt:Option[String])
+  case class Props (appProps: AppProps,
+                    mdUrl:String,
+                    maybeImages:Seq[Option[String]],
+                    aTitleOpt:Option[String])
   type State = AppState
   override def initialState: State = AppState("")
 

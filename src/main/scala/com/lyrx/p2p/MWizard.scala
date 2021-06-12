@@ -23,20 +23,29 @@ import scala.scalajs.js
 
 
 
+  def extractSection(s:String): Array[String] ={
+    val stringss: Array[String] = s.split("---")
+    if(stringss.length>0)stringss else Array[String](s)
+
+
+  }
+
   def loadData(): Future[Unit] = loadString(
     props.url).map(s => {
-    val strings: Array[String] = s.split("---")
-    val newPageIndex = if (props.appProps.isGerman()) (
+    val aArray: Array[String] = extractSection(s)
+    setState(state.copy(
+      textOpt = Some(aArray(calcCurrentPage())),
+      pageCount = (aArray.length / (if(props.isDual) 2 else 1)) - 1
+    ))
+  })(ExecutionContext.global)
+
+  private def calcCurrentPage() = {
+    if (props.isDual) (if (props.appProps.isGerman()) (
       (state.page * 2) //  0 2 4 6
       ) else (
       (state.page * 2) + 1 // 1 3 5 7
-      )
-    setState(state.copy(
-      textOpt = Some(
-        strings(newPageIndex)),
-      pageCount = (strings.length / (if(props.isDual) 2 else 1)) - 1
-    ))
-  })(ExecutionContext.global)
+      )) else (state.page)
+  }
 
   override def componentDidUpdate(prevProps: Props, prevState: State): Unit = {
 
@@ -96,7 +105,7 @@ import scala.scalajs.js
     )
   }
 
-  def currentImage()=props.maybeImages(state.page)
+  def currentImage(): Option[String] =props.maybeImages.lift(state.page).flatten
 
 
 
