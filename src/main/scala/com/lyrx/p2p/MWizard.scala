@@ -13,8 +13,8 @@ import scala.scalajs.js
 @react class MWizard extends Component {
 
   case class Props(appProps: AppProps, url: String, maybeImages: Seq[Option[String]], titleOpt: Option[String],isDual:Boolean)
-  case class State(textOpt: Option[String], page: Int, pageCount: Int)
-  override def initialState: State = State(textOpt = None, page = 0, pageCount = 0)
+  case class State(textOpt: Option[String], page: Int, maxIndex: Int)
+  override def initialState: State = State(textOpt = None, page = 0, maxIndex = 0)
 
   override def componentDidMount(): Unit = loadData()
   override def componentWillUnmount(): Unit = {
@@ -23,11 +23,9 @@ import scala.scalajs.js
 
 
 
-  def extractSection(s:String): Array[String] ={
+  private  def extractSection(s:String): Array[String] ={
     val stringss: Array[String] = s.split("---")
     if(stringss.length>0)stringss else Array[String](s)
-
-
   }
 
   def loadData(): Future[Unit] = loadString(
@@ -35,7 +33,7 @@ import scala.scalajs.js
     val aArray: Array[String] = extractSection(s)
     setState(state.copy(
       textOpt = Some(aArray(calcCurrentPage())),
-      pageCount = (aArray.length / (if(props.isDual) 2 else 1)) - 1
+      maxIndex = (aArray.length / (if(props.isDual) 2 else 1)) - 1
     ))
   })(ExecutionContext.global)
 
@@ -59,7 +57,7 @@ import scala.scalajs.js
 
 
   def nav() = {
-    val maxPage: Int = state.pageCount
+    val maxPageIndex: Int = state.maxIndex
     val buttonPadding = "30px"
     val aPaddingTop = "30px"
     p(style :=js.Dynamic.literal(paddingTop = aPaddingTop))(
@@ -89,7 +87,7 @@ import scala.scalajs.js
 
 
       a(href := "#",
-        style := (if (state.page < maxPage)
+        style := (if (state.page < maxPageIndex)
           js.Dynamic.literal(borderBottom = "0px")
         else
           js.Dynamic.literal(visibility = "hidden", borderBottom = "0px"))
