@@ -18,7 +18,7 @@ import slinky.web.html.{onClick, _}
 
 
   def render() = Fragment(
-    a( href:="#",className:="logo", strong("lyrx"), span("Books")))
+    a( href:="#",className:="logo", strong("Unbegrenzte Gegenwart"), span("")))
 
 
 }

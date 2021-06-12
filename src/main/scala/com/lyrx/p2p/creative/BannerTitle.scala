@@ -15,7 +15,7 @@ import slinky.core.facade.Fragment
 
 
   def render() =  Fragment(
-      """Texte für den  Alltag"""   )
+      """Texte für den  Privatgebrauch"""   )
 
 
 }
